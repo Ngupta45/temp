@@ -219,19 +219,20 @@
     "id": "quote",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "author",
-        "label": "Name",
-        "value": ""
-      },
-      {
         "component": "richtext",
         "name": "quoteText",
         "value": "",
         "label": "Quote",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "author",
+        "label": "Name",
+        "value": ""
       }
+
     ]
   }
 ]

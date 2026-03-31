@@ -169,9 +169,11 @@
                 "template": {
                   "name": "quote",
                   "model": "quote",
+
                   "filter": "quote",
-                  "author" : "Nishant Gupta",
-                  "quoteText": "Live Life"
+                  "quoteText": "Live Life",
+                  "author" : "Nishant Gupta"
+
                 }
               }
             }
