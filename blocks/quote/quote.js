@@ -5,21 +5,8 @@ export default function decorate(block) {
   // 2. If there is nothing inside the block, stop
   if (rows.length === 0) return;
 
-  // 3. First row: try to find the quote text element
-  const quoteTextEl =
-    rows[0].querySelector('[data-aue-prop="quoteText"]') ||
-    rows[0].querySelector('p') ||
-    rows[0].querySelector('div');
-    console.log(quoteTextEl );
-
-  // 4. Second row (optional): try to find the author element
-  const authorRow = rows[1];
-  const authorEl = authorRow
-    ? authorRow.querySelector('[data-aue-prop="author"]') ||
-      authorRow.querySelector('p') ||
-      authorRow.querySelector('div')
-    : null;
-     console.log(authorEl );
+const quoteTextEl = block.querySelector('[data-aue-prop="quoteText"]');
+const authorEl = block.querySelector('[data-aue-prop="author"]');
 
   // 5. Create the semantic wrapper elements
   const figure = document.createElement('figure');
