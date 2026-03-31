@@ -156,6 +156,23 @@
               }
             }
           }
+        },
+        {
+          "title": "Quote",
+          "id": "quote",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "model": "quote",
+                "filter": "quote",
+                "template": {
+                  "name": "Nishant Gupta",
+                  "quoteText": "Live Life"
+                }
+              }
+            }
+          }
         }
       ]
     }
