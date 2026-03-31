@@ -10,6 +10,7 @@ export default function decorate(block) {
     rows[0].querySelector('[data-richtext-prop="quoteText"]') ||
     rows[0].querySelector('p') ||
     rows[0].querySelector('div');
+    console.log(quoteTextEl );
 
   // 4. Second row (optional): try to find the author element
   const authorRow = rows[1];
@@ -18,6 +19,7 @@ export default function decorate(block) {
       authorRow.querySelector('p') ||
       authorRow.querySelector('div')
     : null;
+     console.log(authorEl );
 
   // 5. Create the semantic wrapper elements
   const figure = document.createElement('figure');
