@@ -7,7 +7,7 @@ export default function decorate(block) {
 
   // 3. First row: try to find the quote text element
   const quoteTextEl =
-    rows[0].querySelector('[data-richtext-prop="quoteText"]') ||
+    rows[0].querySelector('[data-aue-prop="quoteText"]') ||
     rows[0].querySelector('p') ||
     rows[0].querySelector('div');
     console.log(quoteTextEl );
