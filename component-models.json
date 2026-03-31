@@ -221,7 +221,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "name",
+        "name": "author",
         "label": "Name",
         "value": ""
       },
