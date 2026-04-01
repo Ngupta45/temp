@@ -238,13 +238,21 @@
         "name": "variant",
         "label": "Variant",
         "options": [
-          { "name": "Default", "value": "default" },
-          { "name": "Highlight", "value": "highlight" },
-          { "name": "Subtle", "value": "subtle" }
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          },
+          {
+            "name": "Subtle",
+            "value": "subtle"
+          }
         ],
         "value": "default"
       }
-
     ]
   }
 ]
