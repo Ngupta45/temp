@@ -7,19 +7,19 @@ export default function decorate(block) {
   const authorByProp = block.querySelector('[data-aue-prop="author"]');
   const variationByProp = block.querySelector('[data-aue-prop="variation"]');
 
-  const quoteTextEl =
-    quoteByProp ||paragraphs[0];
-  const authorEl =
-    authorByProp ||paragraphs[1];
+  let quoteTextEl = quoteByProp || paragraphs[0];
+  let authorEl = authorByProp || paragraphs[1];
+  const variationEl = variationByProp || paragraphs[2];
 
-    const variationVal =
-      variationByProp ||paragraphs[2];
-console.log(variationVal);
   // If we have neither, nothing to render
   if (!quoteTextEl && !authorEl) {
-    // Fail-safe: leave original markup in place
-    // console.warn('quote block: no content found', block);
     return;
+  }
+
+  // Read variation value and apply as a modifier class
+  const variation = variationEl?.textContent?.trim().toLowerCase();
+  if (variation && variation !== 'default') {
+    block.classList.add(`quote--${variation}`);
   }
 
   // Build semantic markup

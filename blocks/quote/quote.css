@@ -1,10 +1,11 @@
-/* Base quote block container */
+/* ============================================================
+   Base quote block — DEFAULT variation
+   ============================================================ */
 .quote.block {
   margin: 2rem auto;
   max-width: 52rem;
 }
 
-/* Base figure */
 .quote.block .quote__figure {
   margin: 0;
   padding: 1.75rem 2rem;
@@ -14,7 +15,6 @@
   box-shadow: 0 2px 6px rgb(15 23 42 / 0.06);
 }
 
-/* Quote text */
 .quote.block .quote__text {
   margin: 0;
   font-size: 1.1rem;
@@ -22,7 +22,6 @@
   font-style: italic;
 }
 
-/* Author */
 .quote.block .quote__author {
   margin-top: 1rem;
   font-size: 0.95rem;
@@ -31,22 +30,110 @@
   color: #555;
 }
 
-/* Variant: highlight
-   Add class `highlight` to the block (e.g. "quote block highlight") */
-.quote.block.highlight .quote__figure {
-  border-left-color: #ff9800;
-  background: #fff7e6;
+/* ============================================================
+   Variation: quote
+   Pull-quote style — centered with large decorative marks
+   ============================================================ */
+.quote.block.quote--quote .quote__figure {
+  border-left: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 2.5rem 3rem;
+  text-align: center;
+  position: relative;
 }
 
-.quote.block.highlight .quote__text {
+.quote.block.quote--quote .quote__figure::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  line-height: 1;
+  color: #5c6bc0;
+  font-family: Georgia, serif;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.quote.block.quote--quote .quote__text {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: #1a1a2e;
+  font-family: Georgia, serif;
+  position: relative;
+  z-index: 1;
+}
+
+.quote.block.quote--quote .quote__author {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5c6bc0;
+}
+
+.quote.block.quote--quote .quote__author::before {
+  content: '— ';
+}
+
+/* ============================================================
+   Variation: figure
+   Editorial card style — dark background, bold statement
+   ============================================================ */
+.quote.block.quote--figure .quote__figure {
+  border-left: none;
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 2.5rem 2.25rem 2rem;
+  box-shadow: 0 8px 32px rgb(15 23 42 / 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.quote.block.quote--figure .quote__figure::after {
+  content: '\201C';
+  position: absolute;
+  bottom: -1.5rem;
+  right: 1.5rem;
+  font-size: 9rem;
+  line-height: 1;
+  color: #5c6bc0;
+  font-family: Georgia, serif;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.quote.block.quote--figure .quote__text {
   font-size: 1.2rem;
+  line-height: 1.65;
+  font-style: normal;
+  font-weight: 500;
+  color: #e8eaf6;
+  position: relative;
+  z-index: 1;
 }
 
-.quote.block.highlight .quote__author {
-  color: #c26a00;
+.quote.block.quote--figure .quote__author {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 0.15);
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9fa8da;
 }
 
-/* Responsive tweaks */
+/* ============================================================
+   Responsive tweaks
+   ============================================================ */
 @media (max-width: 768px) {
   .quote.block {
     margin: 1.5rem 1rem;
@@ -54,5 +141,21 @@
 
   .quote.block .quote__figure {
     padding: 1.25rem 1.5rem;
+  }
+
+  .quote.block.quote--quote .quote__figure {
+    padding: 2rem 1.5rem;
+  }
+
+  .quote.block.quote--quote .quote__text {
+    font-size: 1.2rem;
+  }
+
+  .quote.block.quote--figure .quote__figure {
+    padding: 2rem 1.5rem 1.75rem;
+  }
+
+  .quote.block.quote--figure .quote__text {
+    font-size: 1.05rem;
   }
 }
