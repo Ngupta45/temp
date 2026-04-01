@@ -231,6 +231,18 @@
         "name": "author",
         "label": "Name",
         "value": ""
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "variant",
+        "label": "Variant",
+        "options": [
+          { "label": "Default", "value": "default" },
+          { "label": "Highlight", "value": "highlight" },
+          { "label": "Subtle", "value": "subtle" }
+        ],
+        "value": "default"
       }
 
     ]

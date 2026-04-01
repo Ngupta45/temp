@@ -171,7 +171,8 @@
                   "model": "quote",
                   "filter": "quote",
                   "quoteText": "Live Life",
-                  "author" : "Nishant Gupta"
+                  "author" : "Nishant Gupta",
+                  "variant" : "default"
 
                 }
               }
