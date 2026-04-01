@@ -1,14 +1,58 @@
-/* blocks/quote/quote.css */
-.quote {
-  padding: 1.5rem;
-  border-left: 4px solid #0088cc;
-  background: #f5f5f5;
+/* Base quote block container */
+.quote.block {
+  margin: 2rem auto;
+  max-width: 52rem;
+}
+
+/* Base figure */
+.quote.block .quote__figure {
+  margin: 0;
+  padding: 1.75rem 2rem;
+  border-left: 4px solid var(--quote-border-color, #5c6bc0);
+  background: var(--quote-bg-color, #f8f9fb);
+  color: var(--quote-text-color, #222);
+  box-shadow: 0 2px 6px rgb(15 23 42 / 0.06);
+}
+
+/* Quote text */
+.quote.block .quote__text {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
   font-style: italic;
 }
 
-.quote .name {
-  display: block;
-  margin-top: 0.75rem;
+/* Author */
+.quote.block .quote__author {
+  margin-top: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  font-style: normal;
+  text-align: right;
+  color: #555;
+}
+
+/* Variant: highlight
+   Add class `highlight` to the block (e.g. "quote block highlight") */
+.quote.block.highlight .quote__figure {
+  border-left-color: #ff9800;
+  background: #fff7e6;
+}
+
+.quote.block.highlight .quote__text {
+  font-size: 1.2rem;
+}
+
+.quote.block.highlight .quote__author {
+  color: #c26a00;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .quote.block {
+    margin: 1.5rem 1rem;
+  }
+
+  .quote.block .quote__figure {
+    padding: 1.25rem 1.5rem;
+  }
 }
