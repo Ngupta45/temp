@@ -238,9 +238,9 @@
         "name": "variant",
         "label": "Variant",
         "options": [
-          { "label": "Default", "value": "default" },
-          { "label": "Highlight", "value": "highlight" },
-          { "label": "Subtle", "value": "subtle" }
+          { "name": "Default", "value": "default" },
+          { "name": "Highlight", "value": "highlight" },
+          { "name": "Subtle", "value": "subtle" }
         ],
         "value": "default"
       }
