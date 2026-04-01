@@ -164,15 +164,10 @@
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
-                "model": "quote",
-                "filter": "quote",
                 "template": {
-                  "name": "quote",
+                  "name": "Quote",
                   "model": "quote",
-                  "filter": "quote",
-                  "quoteText": "Live Life",
-                  "author" : "Nishant Gupta",
-                  "variation" : ""
+                  "filter": "quote"
                 }
               }
             }
