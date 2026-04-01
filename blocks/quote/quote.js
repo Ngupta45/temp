@@ -1,4 +1,15 @@
 export default function decorate(block) {
+
+  // Detect AEM author (UE) via the aemconnection meta
+  const isAemAuthor = !!document.querySelector(
+    'meta[name="urn:adobe:aue:system:aemconnection"]',
+  );
+
+  // In author: DO NOT touch the inner HTML → keep data-aue-* props for UE
+  if (isAemAuthor) {
+    return;
+  }
+
   // All paragraphs inside this quote instance
   const paragraphs = Array.from(block.querySelectorAll('p'));
 

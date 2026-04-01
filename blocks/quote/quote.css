@@ -1,58 +1,79 @@
-/* Base quote block container */
+/* Base container */
 .quote.block {
   margin: 2rem auto;
-  max-width: 52rem;
+  max-width: 48rem;
 }
 
-/* Base figure */
-.quote.block .quote__figure {
+/* Base quote figure */
+.quote.block figure.quote,
+figure.quote {
   margin: 0;
-  padding: 1.75rem 2rem;
-  border-left: 4px solid var(--quote-border-color, #5c6bc0);
-  background: var(--quote-bg-color, #f8f9fb);
-  color: var(--quote-text-color, #222);
-  box-shadow: 0 2px 6px rgb(15 23 42 / 0.06);
-}
-
-/* Quote text */
-.quote.block .quote__text {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid #cccccc;
+  background: #f8f8f8;
   font-style: italic;
 }
 
-/* Author */
-.quote.block .quote__author {
-  margin-top: 1rem;
+/* Base typography */
+.quote.block blockquote,
+figure.quote blockquote {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.quote.block figcaption,
+figure.quote figcaption {
+  margin: 0;
   font-size: 0.95rem;
   font-weight: 600;
   text-align: right;
-  color: #555;
+  font-style: normal;
+  color: #555555;
 }
 
-/* Variant: highlight
-   Add class `highlight` to the block (e.g. "quote block highlight") */
-.quote.block.highlight .quote__figure {
-  border-left-color: #ff9800;
-  background: #fff7e6;
+/* === Variant: highlight === */
+/* Applied when variant field = "highlight" → class quote--highlight */
+
+.quote.block.quote--highlight figure.quote,
+figure.quote.quote--highlight {
+  border-left-color: #0054ff;
+  background: #eef3ff;
 }
 
-.quote.block.highlight .quote__text {
-  font-size: 1.2rem;
+.quote.block.quote--highlight blockquote,
+figure.quote.quote--highlight blockquote {
+  color: #002b80;
+  font-weight: 500;
 }
 
-.quote.block.highlight .quote__author {
-  color: #c26a00;
+.quote.block.quote--highlight figcaption,
+figure.quote.quote--highlight figcaption {
+  color: #003cb3;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .quote.block {
-    margin: 1.5rem 1rem;
+/* === Variant: subtle === */
+
+.quote.block.quote--subtle figure.quote,
+figure.quote.quote--subtle {
+  border-left-color: #dddddd;
+  background: transparent;
+}
+
+.quote.block.quote--subtle blockquote,
+figure.quote.quote--subtle blockquote {
+  color: #444444;
+}
+
+.quote.block.quote--subtle figcaption,
+figure.quote.quote--subtle figcaption {
+  color: #777777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .quote.block figure.quote,
+  figure.quote {
+    padding: 1rem 1.25rem;
   }
-
-  .quote.block .quote__figure {
-    padding: 1.25rem 1.5rem;
-  }
-}
