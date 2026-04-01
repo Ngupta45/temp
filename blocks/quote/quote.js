@@ -5,21 +5,16 @@ export default function decorate(block) {
   // Prefer AEM authoring props when present
   const quoteByProp = block.querySelector('[data-aue-prop="quoteText"]');
   const authorByProp = block.querySelector('[data-aue-prop="author"]');
+  const variationByProp = block.querySelector('[data-aue-prop="variation"]');
 
-  // Quote text:
-  // 1) AEM: data-aue-prop="quoteText"
-  // 2) EDS: second <p> if available
-  // 3) Fallback: first <p>
   const quoteTextEl =
     quoteByProp ||paragraphs[0];
-
-
-  // Author:
-  // 1) AEM: data-aue-prop="author"
-  // 2) EDS: first <p> (as long as it's not the same as quote)
-  let authorEl =
+  const authorEl =
     authorByProp ||paragraphs[1];
 
+    const variationVal =
+      variationByProp ||paragraphs[2];
+console.log(variationVal);
   // If we have neither, nothing to render
   if (!quoteTextEl && !authorEl) {
     // Fail-safe: leave original markup in place
