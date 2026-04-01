@@ -233,6 +233,25 @@
         "label": "Name",
         "value": ""
       }
+      ,{
+        "component": "select",
+        "name": "variation",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Quote",
+            "value": "quote"
+          },
+          {
+            "name": "Figure",
+            "value": "figure"
+          }
+        ]
+      }
 
     ]
   }
