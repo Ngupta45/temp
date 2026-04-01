@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "quote"
+      "quote",
+      "enquiry-form"
     ]
   },
   {
@@ -38,7 +39,8 @@
       "image",
       "button",
       "title",
-      "quote"
+      "quote",
+      "enquiry-form"
     ]
   }
 ]
