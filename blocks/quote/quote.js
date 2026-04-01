@@ -11,17 +11,14 @@ export default function decorate(block) {
   // 2) EDS: second <p> if available
   // 3) Fallback: first <p>
   const quoteTextEl =
-    quoteByProp ||
-    (paragraphs.length > 1 ? paragraphs[1] : null) ||
-    paragraphs[0] ||
-    null;
+    quoteByProp ||paragraphs[0];
+
 
   // Author:
   // 1) AEM: data-aue-prop="author"
   // 2) EDS: first <p> (as long as it's not the same as quote)
   let authorEl =
-    authorByProp ||
-    (paragraphs[0] && paragraphs[0] !== quoteTextEl ? paragraphs[0] : null);
+    authorByProp ||paragraphs[1];
 
   // If we have neither, nothing to render
   if (!quoteTextEl && !authorEl) {
