@@ -254,5 +254,59 @@
       }
 
     ]
+  },
+  {
+    "id": "enquiry-form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "firstNameLabel",
+        "label": "First Name Label",
+        "value": "First Name"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "lastNameLabel",
+        "label": "Last Name Label",
+        "value": "Last Name"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "emailLabel",
+        "label": "Email Label",
+        "value": "Email"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "phoneLabel",
+        "label": "Phone Number Label",
+        "value": "Phone Number"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "queryLabel",
+        "label": "Query Label",
+        "value": "Your Query"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "submitText",
+        "label": "Submit Button Text",
+        "value": "Submit"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "submitLink",
+        "label": "Submit Action URL",
+        "value": "#"
+      }
+    ]
   }
 ]
