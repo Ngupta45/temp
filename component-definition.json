@@ -187,6 +187,36 @@
               }
             }
           }
+        },
+        {
+          "title": "Product Hero",
+          "id": "product-hero",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Product Hero",
+                  "model": "product-hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Article Listing",
+          "id": "article-listing",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Article Listing",
+                  "model": "article-listing"
+                }
+              }
+            }
+          }
         }
       ]
     }

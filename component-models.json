@@ -308,5 +308,78 @@
         "value": "#"
       }
     ]
+  },
+  {
+    "id": "product-hero",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Product Image (DAM)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaText",
+        "label": "CTA Button Text",
+        "value": "Learn More"
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "CTA Button Link"
+      }
+    ]
+  },
+  {
+    "id": "article-listing",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "graphqlEndpoint",
+        "label": "GraphQL Endpoint",
+        "value": "/content/cq:graphql/global/endpoint.json",
+        "description": "AEM GraphQL endpoint URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "contentFragmentModel",
+        "label": "Content Fragment Model",
+        "value": "article",
+        "description": "Name of the Content Fragment Model (e.g., 'article')"
+      },
+      {
+        "component": "aem-content",
+        "name": "articleRootPath",
+        "label": "Article Root Path",
+        "description": "Path to filter articles (optional)"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "maxArticles",
+        "label": "Maximum Articles",
+        "value": "5",
+        "description": "Maximum number of articles to display"
+      }
+    ]
   }
 ]
